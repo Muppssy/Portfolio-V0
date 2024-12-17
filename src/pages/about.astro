@@ -18,6 +18,37 @@ const contact = [
   },
 ];
 
+const fronts = [
+  { src: "/technos/html5.webp", name: "HTML5" },
+  { src: "/technos/css3.webp", name: "CSS3" },
+  { src: "/technos/js.webp", name: "JavaScript" },
+  { src: "/technos/jquery.webp", name: "jQuery" },
+  { src: "/technos/sass.webp", name: "Sass" },
+  { src: "/technos/bootstrap.webp", name: "Bootstrap" },
+  { src: "/technos/tailwind.webp", name: "Tailwind" },
+  { src: "/technos/astro.webp", name: "Astro Js" },
+];
+
+const backs = [
+  { src: "/technos/php.webp", name: "Php" },
+  { src: "/technos/symfony.webp", name: "Symfony" },
+  { src: "/technos/mysql.webp", name: " mysql" },
+  { src: "/technos/twig.webp", name: "Twig" },
+  { src: "/technos/elasticsearch.webp", name: "Elasticsearch" },
+];
+
+const others = [
+  { src: "/technos/docker.webp", name: "Docker" },
+  { src: "/technos/git.webp", name: " Git" },
+  { src: "/technos/trello.webp", name: "Trello" },
+  { src: "/technos/figma.webp", name: "Figma" },
+  { src: "/technos/illustrator.webp", name: " Illustrator" },
+  { src: "/technos/ps.webp", name: " Photoshop" },
+  { src: "/technos/word.webp", name: " Word" },
+  { src: "/technos/excel.webp", name: " Excel" },
+  { src: "/technos/powerpoint.webp", name: "Powerpoint" },
+];
+
 
 ---
 
@@ -269,6 +300,105 @@ const contact = [
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" class="brg2 relative overflow-hidden">
+        <div
+          class="relative w-full h-auto min-h-screen py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"
+        >
+          <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2
+              class="mb-4 text-4xl font-roboto tracking-tight font-extrabold text-white dark:text-gray-900"
+            >
+              Mon expertise
+            </h2>
+          </div>
+
+          <!-- Conteneur des cartes en position absolue -->
+          <div
+            class="relative h-full space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
+          >
+            <!-- Carte Front End -->
+            <div
+              class="front-expert flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-gray-900 rounded-lg border border-gray-800 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-poppins font-semibold">
+                Front End
+              </h3>
+              <div class="flex justify-center gap-6 items-center flex-wrap">
+                {
+                  fronts.map((front) => (
+                    <div class="card flex flex-col items-center">
+                      <img
+                        src={front.src}
+                        alt={front.name}
+                        class="w-16 h-16"
+                        loading="lazy"
+                      />
+                      <div class="card-content bg-gray-700 w-full rounded-b-md">
+                        <p class="text-white font-bold text-center">
+                          {front.name}
+                        </p>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- Carte Back End -->
+            <div
+              class="back-expert flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-gray-900 rounded-lg border border-gray-800 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-poppins font-semibold">Back End</h3>
+              <div class="flex justify-center gap-6 items-center flex-wrap">
+                {
+                  backs.map((back) => (
+                    <div class="card flex flex-col items-center">
+                      <img
+                        src={back.src}
+                        alt={back.name}
+                        class="w-16 h-16"
+                        loading="lazy"
+                      />
+                      <div class="card-content bg-gray-700 w-full rounded-b-md">
+                        <p class="text-white font-bold text-center">
+                          {back.name}
+                        </p>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- Carte Autre -->
+            <div
+              class="other-expert flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-gray-900 rounded-lg border border-gray-800 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-poppins font-semibold">Autre</h3>
+              <div class="flex justify-center gap-6 items-center flex-wrap">
+                {
+                  others.map((other) => (
+                    <div class="card flex flex-col items-center">
+                      <img
+                        src={other.src}
+                        alt={other.name}
+                        class="w-16 h-16"
+                        loading="lazy"
+                      />
+                      <div class="card-content bg-gray-700 w-full rounded-b-md">
+                        <p class="text-white font-bold text-center">
+                          {other.name}
+                        </p>
+                      </div>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>
